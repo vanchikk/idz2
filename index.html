@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Моніторинг погоди</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Моніторинг погоди</h1>
+
+<div class="controls">
+
+    <label>Населений пункт:</label>
+
+    <select id="city">
+        <option>Київ</option>
+        <option>Львів</option>
+        <option>Одеса</option>
+        <option>Харків</option>
+        <option>Дніпро</option>
+    </select>
+
+    <label>Частота оновлення:</label>
+
+    <select id="interval">
+        <option value="1000">1 секунда</option>
+        <option value="3000">3 секунди</option>
+        <option value="5000">5 секунд</option>
+    </select>
+
+    <button id="startBtn">Почати</button>
+
+</div>
+
+<div class="weather">
+
+    <p><strong>Місто:</strong> <span id="cityName">-</span></p>
+    <p><strong>Температура:</strong> <span id="temperature">-</span> °C</p>
+    <p><strong>Опади:</strong> <span id="precipitation">-</span> %</p>
+    <p><strong>Тиск:</strong> <span id="pressure">-</span> гПа</p>
+    <p><strong>Швидкість вітру:</strong> <span id="wind">-</span> м/с</p>
+    <p><strong>Час:</strong> <span id="time">-</span></p>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
